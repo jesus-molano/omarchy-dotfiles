@@ -27,10 +27,11 @@ All window management follows vim keybindings using ALT modifier:
 ### ⚡ Hyper Key (Caps Lock)
 
 Caps Lock configured with `keyd`:
+
 - **Tap**: Acts as Escape
 - **Hold**: Acts as Hyper Key (CTRL + ALT + SUPER)
 
-#### Hyper Key Bindings (CAPS + key):
+#### Hyper Key Bindings (CAPS + key)
 
 - `CAPS + c` - Editor (Code/Neovim)
 - `CAPS + Enter` - Terminal (Ghostty)
@@ -83,11 +84,13 @@ This dotfiles repository includes configurations for:
 ### Prerequisites
 
 Install Omarchy first:
+
 ```bash
 curl -sL https://omarchy.org/install | bash
 ```
 
 Install keyd:
+
 ```bash
 yay -S keyd
 # or
@@ -97,16 +100,19 @@ paru -S keyd
 ### Setup
 
 1. Clone this repository:
+
 ```bash
 git clone https://github.com/jesus-molano/omarchy-dotfiles.git
 ```
 
 2. Copy configurations to `~/.config/`:
+
 ```bash
 cp -r omarchy-dotfiles/* ~/.config/
 ```
 
 3. Configure keyd (requires sudo):
+
 ```bash
 sudo cp keyd/default.conf /etc/keyd/default.conf
 sudo systemctl enable --now keyd
@@ -114,6 +120,7 @@ sudo keyd reload
 ```
 
 4. Reload Hyprland:
+
 ```bash
 # Press SUPER + SHIFT + R
 # or logout and login again
@@ -160,6 +167,7 @@ c = C-A-M-c
 Complete setup for modern web development:
 
 **Languages & Frameworks:**
+
 - TypeScript/JavaScript with vtsls (faster LSP)
 - React, Next.js (JSX/TSX support)
 - Astro framework
@@ -168,12 +176,14 @@ Complete setup for modern web development:
 - HTML, CSS, JSON
 
 **AI-Powered Coding:**
+
 - **Supermaven** - FREE AI autocomplete with 1M token context
   - Faster than GitHub Copilot
   - Understands your entire codebase
   - Activate with `:SupermavenUseFree` in Neovim
 
 **Tools Auto-installed:**
+
 - Prettier (formatting)
 - ESLint (linting)
 - Emmet (HTML expansion)
@@ -186,6 +196,7 @@ Complete setup for modern web development:
 Work with AI without leaving the terminal:
 
 **3-Pane Ghostty Layout:**
+
 ```
 ┌──────────────┬───────────┐
 │ Claude Code  │  Neovim   │
@@ -195,6 +206,7 @@ Work with AI without leaving the terminal:
 ```
 
 **Vim-style Navigation:**
+
 - `Ctrl+H/J/K/L` - Jump between panes instantly
 - `Super+Shift+→` - Create right split
 - `Super+Shift+↓` - Create bottom split

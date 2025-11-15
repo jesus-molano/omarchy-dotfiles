@@ -1,31 +1,48 @@
 #!/bin/bash
-# Script to display application menu from DBus
+# Script to display application menu indicator
 
-# Get the active window's GTK menu if available
 get_appmenu() {
-    # Get active window address
-    local active_window=$(hyprctl activewindow -j 2>/dev/null | jq -r '.address // empty')
+    # Get active window info
+    local window_info=$(hyprctl activewindow -j 2>/dev/null)
 
-    if [ -z "$active_window" ]; then
-        echo '{"text": "", "tooltip": "No active window"}'
+    if [ -z "$window_info" ] || [ "$window_info" = "null" ]; then
+        echo '{"text": "", "tooltip": "No active window", "class": "inactive"}'
         return
     fi
 
-    # Try to get the window's application ID
-    local app_class=$(hyprctl activewindow -j 2>/dev/null | jq -r '.class // empty')
+    local app_class=$(echo "$window_info" | jq -r '.class // empty')
+    local app_title=$(echo "$window_info" | jq -r '.title // empty' | head -c 50)
 
     if [ -z "$app_class" ]; then
-        echo '{"text": "", "tooltip": "No menu available"}'
+        echo '{"text": "", "tooltip": "No application", "class": "inactive"}'
         return
     fi
 
-    # Check if the application exports an AppMenu via DBus
-    local menu_available=$(busctl tree --user 2>/dev/null | grep -i "menu" | wc -l)
+    # List of applications that typically have menus
+    local has_menu=false
+    case "$app_class" in
+        *firefox*|*Firefox*|*chrome*|*Chrome*|*chromium*|*Chromium*)
+            has_menu=false  # Browsers don't export DBus menus
+            ;;
+        *GIMP*|*gimp*|*Inkscape*|*inkscape*|*LibreOffice*|*libreoffice*)
+            has_menu=true   # GTK apps with menus
+            ;;
+        *gedit*|*Gedit*|*nautilus*|*Nautilus*|*evince*|*Evince*)
+            has_menu=true   # GNOME apps
+            ;;
+        *)
+            # Check if it's a GTK app by looking for GTK_MODULES
+            local pid=$(echo "$window_info" | jq -r '.pid // empty')
+            if [ -n "$pid" ] && grep -q "GTK" /proc/$pid/environ 2>/dev/null; then
+                has_menu=true
+            fi
+            ;;
+    esac
 
-    if [ "$menu_available" -gt 0 ]; then
-        echo '{"text": "☰", "tooltip": "Application Menu (Click to show)", "class": "active"}'
+    if [ "$has_menu" = true ]; then
+        echo "{\"text\": \"☰\", \"tooltip\": \"Menu: $app_title\", \"class\": \"active\"}"
     else
-        echo '{"text": "", "tooltip": "No menu available for this application"}'
+        echo "{\"text\": \"☰\", \"tooltip\": \"$app_title\", \"class\": \"inactive\"}"
     fi
 }
 
