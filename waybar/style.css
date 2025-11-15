@@ -40,6 +40,12 @@
   margin: 0 7.5px;
 }
 
+#window {
+  margin: 0 10px;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
 #tray {
   margin-right: 16px;
 }
@@ -80,4 +86,14 @@ tooltip {
 
 #custom-screenrecording-indicator.active {
   color: #a55555;
+}
+
+#custom-appmenu {
+  margin: 0 8px;
+  padding: 0 6px;
+  font-size: 14px;
+}
+
+#custom-appmenu.active {
+  font-weight: bold;
 }

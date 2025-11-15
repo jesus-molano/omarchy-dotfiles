@@ -26,11 +26,11 @@ shell-integration-features = no-cursor,ssh-env
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
 
-# Split pane creation (CTRL+SHIFT+arrows - tested working pattern)
-keybind = ctrl+shift+right=new_split:right
-keybind = ctrl+shift+down=new_split:down
-keybind = ctrl+shift+left=new_split:left
-keybind = ctrl+shift+up=new_split:up
+# Split pane creation (CTRL+SHIFT+letters for reliability)
+keybind = ctrl+shift+d=new_split:right
+keybind = ctrl+shift+s=new_split:down
+keybind = ctrl+shift+v=new_split:right
+keybind = ctrl+shift+b=new_split:down
 keybind = super+t=new_tab
 keybind = super+w=close_surface
 
