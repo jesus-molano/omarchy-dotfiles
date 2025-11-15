@@ -31,7 +31,7 @@ Caps Lock configured with `keyd`:
 - `CAPS + Enter` - Terminal (Ghostty)
 - `CAPS + b` - Browser
 - `CAPS + f` - File Manager
-- `CAPS + m` - Music (Spotify)
+- `CAPS + m` - YouTube Music
 - `CAPS + e` - Email
 - `CAPS + t` - Activity Monitor (btop)
 - `CAPS + a` - ChatGPT
