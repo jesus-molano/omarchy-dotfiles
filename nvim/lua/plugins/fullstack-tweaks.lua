@@ -1,15 +1,6 @@
 -- Additional tweaks and optimizations for fullstack development
 
 return {
-  -- Auto-reload files when changed externally (by Claude Code or other tools)
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      -- Auto read files when changed outside of vim
-      vim.opt.autoread = true,
-    },
-  },
-
   -- Better syntax highlighting for JSX/TSX
   {
     "nvim-treesitter/nvim-treesitter",
