@@ -50,7 +50,7 @@ Caps Lock configured with `keyd`:
 
 - `ALT + SPACE` - Application launcher (Walker)
 - `ALT + SHIFT + SPACE` - Omarchy menu
-- `SUPER + SPACE` - **Switch keyboard layout** (ES ⟷ US)
+- `SUPER + SPACE` - **Switch keyboard layout** (ES ⟷ US) with notification
 
 ### 🖥️ Multi-Monitor Support
 
