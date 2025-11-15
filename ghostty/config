@@ -27,11 +27,11 @@ keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
 
 # Split pane creation
-# Using Alt instead of Super to avoid conflicts with Hyprland
-keybind = alt+d=new_split:right
-keybind = alt+shift+d=new_split:down
-keybind = alt+t=new_tab
-keybind = alt+w=close_surface
+# Using Super+Shift+arrows to avoid conflicts with Hyprland letter bindings
+keybind = super+shift+right=new_split:right
+keybind = super+shift+down=new_split:down
+keybind = super+t=new_tab
+keybind = super+w=close_surface
 
 # Vim-style split navigation (Ctrl+hjkl)
 keybind = ctrl+h=goto_split:left
@@ -39,15 +39,15 @@ keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
 keybind = ctrl+l=goto_split:right
 
-# Split resizing (Alt+Shift instead of Super)
-keybind = alt+ctrl+h=resize_split:left,10
-keybind = alt+ctrl+j=resize_split:down,10
-keybind = alt+ctrl+k=resize_split:up,10
-keybind = alt+ctrl+l=resize_split:right,10
+# Split resizing
+keybind = super+ctrl+h=resize_split:left,10
+keybind = super+ctrl+j=resize_split:down,10
+keybind = super+ctrl+k=resize_split:up,10
+keybind = super+ctrl+l=resize_split:right,10
 
-# Tab navigation (Alt instead of Super)
-keybind = alt+1=goto_tab:1
-keybind = alt+2=goto_tab:2
-keybind = alt+3=goto_tab:3
-keybind = alt+4=goto_tab:4
-keybind = alt+5=goto_tab:5
+# Tab navigation
+keybind = super+1=goto_tab:1
+keybind = super+2=goto_tab:2
+keybind = super+3=goto_tab:3
+keybind = super+4=goto_tab:4
+keybind = super+5=goto_tab:5
