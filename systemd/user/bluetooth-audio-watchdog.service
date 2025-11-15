@@ -1,0 +1,12 @@
+[Unit]
+Description=Bluetooth Audio Watchdog
+After=wireplumber.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/bluetooth-audio-watchdog
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target
