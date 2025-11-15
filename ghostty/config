@@ -22,6 +22,31 @@ cursor-style-blink = false
 # (all shell integration options must be passed together)
 shell-integration-features = no-cursor,ssh-env
 
-# Keyboard bindings
+# Keyboard bindings - Clipboard
 keybind = shift+insert=paste_from_clipboard
 keybind = control+insert=copy_to_clipboard
+
+# Split pane creation
+keybind = super+d=new_split:right
+keybind = super+shift+d=new_split:down
+keybind = super+t=new_tab
+keybind = super+w=close_surface
+
+# Vim-style split navigation (Ctrl+hjkl)
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:bottom
+keybind = ctrl+k=goto_split:top
+keybind = ctrl+l=goto_split:right
+
+# Split resizing
+keybind = super+shift+h=resize_split:left,10
+keybind = super+shift+j=resize_split:down,10
+keybind = super+shift+k=resize_split:up,10
+keybind = super+shift+l=resize_split:right,10
+
+# Tab navigation
+keybind = super+1=goto_tab:1
+keybind = super+2=goto_tab:2
+keybind = super+3=goto_tab:3
+keybind = super+4=goto_tab:4
+keybind = super+5=goto_tab:5
