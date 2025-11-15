@@ -18,6 +18,8 @@ All window management follows vim keybindings using ALT modifier:
 - **Resize**: `ALT + CTRL + h/j/k/l` - Resize windows
 - **Workspaces**: `ALT + 1-9` - Switch workspaces
 - **Move to Workspace**: `ALT + SHIFT + 1-9` - Move window to workspace
+- **Mouse Move**: `ALT + Left Click + Drag` - Move window with mouse
+- **Mouse Resize**: `ALT + Right Click + Drag` - Resize window with mouse
 
 ### ⚡ Hyper Key (Caps Lock)
 
