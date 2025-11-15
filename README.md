@@ -35,7 +35,8 @@ Caps Lock configured with `keyd`:
 - `CAPS + c` - Editor (Code/Neovim)
 - `CAPS + Enter` - Terminal (Ghostty)
 - `CAPS + b` - Browser
-- `CAPS + f` - File Manager
+- `CAPS + e` - File Manager (Explorer)
+- `CAPS + f` - Figma
 - `CAPS + m` - YouTube Music
 - `CAPS + e` - Email
 - `CAPS + t` - Activity Monitor (btop)
@@ -44,7 +45,7 @@ Caps Lock configured with `keyd`:
 - `CAPS + y` - YouTube
 - `CAPS + g` - Signal
 - `CAPS + o` - Obsidian
-- `CAPS + d` - Docker (lazydocker)
+- `CAPS + d` - Discord
 
 ### 🚀 Launchers & Keyboard
 
@@ -62,8 +63,14 @@ Caps Lock configured with `keyd`:
 This dotfiles repository includes configurations for:
 
 - **Hyprland** - Tiling Wayland compositor
-- **Neovim/LazyVim** - Text editor
-- **Ghostty** - Terminal emulator
+- **Neovim/LazyVim** - Text editor with fullstack development setup
+  - TypeScript, React, Next.js, Astro, Tailwind, Prisma
+  - Supermaven AI autocomplete (FREE, 1M token context)
+  - Complete LSP setup via Mason
+  - See [FULLSTACK-SETUP.md](nvim/FULLSTACK-SETUP.md)
+- **Ghostty** - GPU-accelerated terminal with vim-style split navigation
+  - Optimized for Claude Code + Neovim workflow
+  - See [CLAUDE-CODE-WORKFLOW.md](CLAUDE-CODE-WORKFLOW.md)
 - **Walker** - Application launcher
 - **keyd** - Key remapping daemon
 - **btop** - System monitor
@@ -146,12 +153,71 @@ c = C-A-M-c
 # ... etc
 ```
 
+## 💻 Fullstack Development Setup
+
+### Neovim/LazyVim Configuration
+
+Complete setup for modern web development:
+
+**Languages & Frameworks:**
+- TypeScript/JavaScript with vtsls (faster LSP)
+- React, Next.js (JSX/TSX support)
+- Astro framework
+- Tailwind CSS with IntelliSense
+- Prisma ORM
+- HTML, CSS, JSON
+
+**AI-Powered Coding:**
+- **Supermaven** - FREE AI autocomplete with 1M token context
+  - Faster than GitHub Copilot
+  - Understands your entire codebase
+  - Activate with `:SupermavenUseFree` in Neovim
+
+**Tools Auto-installed:**
+- Prettier (formatting)
+- ESLint (linting)
+- Emmet (HTML expansion)
+- Tailwind class sorter
+
+📖 **Full documentation:** [nvim/FULLSTACK-SETUP.md](nvim/FULLSTACK-SETUP.md)
+
+### Claude Code Integration
+
+Work with AI without leaving the terminal:
+
+**3-Pane Ghostty Layout:**
+```
+┌──────────────┬───────────┐
+│ Claude Code  │  Neovim   │
+├──────────────┴───────────┤
+│      Terminal            │
+└──────────────────────────┘
+```
+
+**Vim-style Navigation:**
+- `Ctrl+H/J/K/L` - Jump between panes instantly
+- `Super+D` - Create right split
+- `Super+Shift+D` - Create bottom split
+
+📖 **Workflow guide:** [CLAUDE-CODE-WORKFLOW.md](CLAUDE-CODE-WORKFLOW.md)
+
+## 🚀 Quick Start for Developers
+
+1. **Open Ghostty**
+2. **Create splits**: `Super+D` (right), `Super+Shift+D` (bottom)
+3. **Start Claude Code**: `claude-code` (left pane)
+4. **Open Neovim**: `nvim` (right pane)
+5. **Navigate with** `Ctrl+hjkl` between panes
+6. **AI autocomplete** works automatically in Neovim with Supermaven
+
 ## Credits
 
 - [Omarchy](https://omarchy.org) - by DHH (David Heinemeier Hansson)
 - [Hyprland](https://hyprland.org) - by vaxry
 - [keyd](https://github.com/rvaiya/keyd) - by rvaiya
 - [LazyVim](https://www.lazyvim.org) - by folke
+- [Supermaven](https://supermaven.com) - AI autocomplete
+- [Ghostty](https://ghostty.org) - Terminal emulator
 
 ## License
 
