@@ -5,3 +5,6 @@ vim.opt.relativenumber = true
 
 -- Auto-reload files when changed externally (e.g., by Claude Code)
 vim.opt.autoread = true
+
+-- Desactivar formateo automático al guardar globalmente
+vim.g.autoformat = false
