@@ -38,8 +38,8 @@ Or follow [Claude Code docs](https://docs.anthropic.com/claude-code)
 ### 2. Create the Layout in Ghostty
 
 1. Open Ghostty terminal
-2. Press `SUPER + D` to create a right split (for Neovim)
-3. Press `SUPER + SHIFT + D` to create a bottom split (for terminal)
+2. Press `SUPER + SHIFT + →` to create a right split (for Neovim)
+3. Press `SUPER + SHIFT + ↓` to create a bottom split (for terminal)
 
 You now have 3 panes!
 
@@ -64,9 +64,10 @@ nvim
 
 ### Split Management
 
-- `SUPER + D` - Create right split
-- `SUPER + SHIFT + D` - Create bottom split
+- `SUPER + SHIFT + →` - Create right split
+- `SUPER + SHIFT + ↓` - Create bottom split
 - `SUPER + W` - Close current split
+- `SUPER + T` - New tab
 
 ### Vim-Style Navigation (Instant!)
 
@@ -79,14 +80,13 @@ nvim
 
 ### Split Resizing
 
-- `SUPER + SHIFT + H` - Resize left
-- `SUPER + SHIFT + L` - Resize right
-- `SUPER + SHIFT + J` - Resize down
-- `SUPER + SHIFT + K` - Resize up
+- `SUPER + CTRL + H` - Resize left
+- `SUPER + CTRL + L` - Resize right
+- `SUPER + CTRL + J` - Resize down
+- `SUPER + CTRL + K` - Resize up
 
 ### Tab Management
 
-- `SUPER + T` - New tab
 - `SUPER + 1-5` - Switch to tab 1-5
 
 ## 💡 Workflow Tips

@@ -196,15 +196,15 @@ Work with AI without leaving the terminal:
 
 **Vim-style Navigation:**
 - `Ctrl+H/J/K/L` - Jump between panes instantly
-- `Super+D` - Create right split
-- `Super+Shift+D` - Create bottom split
+- `Super+Shift+→` - Create right split
+- `Super+Shift+↓` - Create bottom split
 
 📖 **Workflow guide:** [CLAUDE-CODE-WORKFLOW.md](CLAUDE-CODE-WORKFLOW.md)
 
 ## 🚀 Quick Start for Developers
 
 1. **Open Ghostty**
-2. **Create splits**: `Super+D` (right), `Super+Shift+D` (bottom)
+2. **Create splits**: `Super+Shift+→` (right), `Super+Shift+↓` (bottom)
 3. **Start Claude Code**: `claude-code` (left pane)
 4. **Open Neovim**: `nvim` (right pane)
 5. **Navigate with** `Ctrl+hjkl` between panes
