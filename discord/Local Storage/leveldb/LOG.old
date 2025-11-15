@@ -1,5 +1,0 @@
-2025/11/15-03:25:54.504 7e80 Creating DB /home/jesus-molano/.config/discord/Local Storage/leveldb since it was missing.
-2025/11/15-03:25:54.522 7e80 Reusing MANIFEST /home/jesus-molano/.config/discord/Local Storage/leveldb/MANIFEST-000001
-2025/11/15-03:32:32.907 7e81 Level-0 table #5: started
-2025/11/15-03:32:32.962 7e81 Level-0 table #5: 2682991 bytes OK
-2025/11/15-03:32:32.969 7e81 Delete type=0 #3
