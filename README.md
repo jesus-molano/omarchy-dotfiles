@@ -46,10 +46,11 @@ Caps Lock configured with `keyd`:
 - `CAPS + o` - Obsidian
 - `CAPS + d` - Docker (lazydocker)
 
-### 🚀 Launchers
+### 🚀 Launchers & Keyboard
 
-- `SUPER + SPACE` - Application launcher (Walker)
-- `SUPER + ALT + SPACE` - Omarchy menu
+- `ALT + SPACE` - Application launcher (Walker)
+- `ALT + SHIFT + SPACE` - Omarchy menu
+- `SUPER + SPACE` - **Switch keyboard layout** (ES ⟷ US)
 
 ### 🖥️ Multi-Monitor Support
 
