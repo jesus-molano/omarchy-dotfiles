@@ -1,0 +1,44 @@
+# Omarchy Dotfiles - Gitignore
+
+# Exclude browser data and caches
+BraveSoftware/
+google-chrome*/
+chromium/
+microsoft-edge*/
+
+# Exclude application data
+1Password/
+dconf/
+fcitx/
+fcitx5/
+ibus/
+
+# Exclude caches and temporary files
+*/cache/
+*/Cache/
+*/.cache/
+*/tmp/
+*/temp/
+
+# Keep only essential configs
+# Include: hypr, nvim, ghostty, kitty, alacritty, walker, omarchy, etc.
+
+# Exclude sensitive files
+**/credentials
+**/secrets
+**/*.key
+**/*.pem
+**/*.p12
+
+# Exclude logs
+*.log
+**/*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor specific
+*.swp
+*.swo
+*~
