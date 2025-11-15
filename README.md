@@ -34,7 +34,8 @@ Caps Lock configured with `keyd`:
 - `CAPS + m` - YouTube Music
 - `CAPS + e` - Email
 - `CAPS + t` - Activity Monitor (btop)
-- `CAPS + a` - ChatGPT
+- `CAPS + a` - Claude
+- `CAPS + SHIFT + a` - ChatGPT
 - `CAPS + y` - YouTube
 - `CAPS + g` - Signal
 - `CAPS + o` - Obsidian
