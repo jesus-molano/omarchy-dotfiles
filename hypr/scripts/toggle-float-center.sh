@@ -8,9 +8,9 @@ hyprctl dispatch togglefloating
 is_floating=$(hyprctl activewindow -j | jq -r '.floating')
 
 if [ "$is_floating" = "true" ]; then
+    # Resize to 60% of screen
+    hyprctl dispatch resizeactive exact 60% 60%
+
     # Center the window
     hyprctl dispatch centerwindow
-
-    # Resize to 80% of screen (optional, adjust as needed)
-    # hyprctl dispatch resizeactive exact 80% 80%
 fi
